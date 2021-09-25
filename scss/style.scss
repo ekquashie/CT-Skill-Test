@@ -1,0 +1,513 @@
+@import 'mixins';
+
+$primary: rgb(65, 79, 107);
+$primary-gradient: rgba(65, 79, 107, 0.502);
+$menuBG: rgb(176, 180, 190);
+
+// Screen Sizes
+$sm: 480px;
+$md: 768px;
+$lg: 1024px;
+
+* {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background: white;
+    @media only screen and (max-width: $sm) {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+// First Frame
+#main1 {
+    @include main;
+    background-image: url("../img/main1.png");
+    background-position: top;
+    position: relative;
+
+    @media only screen and (max-width: $sm) {
+        min-width: 100%;
+    }
+
+    .galaxy {
+        position: absolute;
+        background-image: url("../img/Layer 627.png");
+        opacity: 0.29;
+        top: 0;
+        left: 0;
+        @include main;
+    }
+
+    header {
+        position: relative;
+        padding-top: 8px;
+        nav {
+            @include nav;
+
+            ul {
+                width: auto;
+                display: flex;
+                flex-direction: row;
+                list-style-type: none;
+
+                li {
+                    cursor: pointer;
+                    margin-right: 50px;
+                    
+                    a {
+                        color: white;
+                        @include headinglink;
+                    }
+                }
+            }
+        }
+    }
+    #losangeles {
+        position: absolute;
+        margin-right: 40px;
+        transform: translate(-50%, -50%);
+        height: 220px;
+        width: 510px;
+        top: 41.5%;
+        left: 44%;
+
+        @media only screen and (max-width: $sm) {
+            height: 100px;
+            width: 210px;
+            top: 24%;
+        }
+    }
+}
+
+// Second Frame
+#history {
+    @include main;
+    background-image: url("../img/main2.png");
+    background-position: top;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    header {
+        padding: 16px 0;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        background-color: white;
+        align-items: center;
+        justify-content: center;
+        nav {
+            @include nav;
+            height: auto;
+
+            .logo {
+                img#one {
+                    margin-right: 10px;
+                }
+            }
+
+            ul {
+                width: auto;
+                display: flex;
+                list-style-type: none;
+
+                li {
+                    cursor: pointer;
+                    margin-right: 50px;
+                    a {
+                        color: $primary;
+                        @include headinglink;
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 88%;
+
+        #lorem {
+
+            h1 {
+                position: absolute;
+                color: $primary-gradient;
+                font-family: "Oswald";
+                color: rgba(65, 79, 107, 0.502);
+                font-weight: bold;
+                font-size: 150px;
+                line-height: 1.2;
+                text-align: left;
+                left: 300px;
+                top: 100px;
+                @media only screen and(max-width: $sm) {
+                    left:50px;
+                    font-size: 100px;
+                    top: 150px;
+                }
+            }
+
+            h3 {
+                font-size: 40px;
+                font-family: "Oswald";
+                color: $primary;
+                font-weight: bold;
+                line-height: 1.2;
+                text-align: left;
+                text-transform: uppercase;
+                position: absolute;
+                left: 445px;
+                top: 180px;
+                @media only screen and(max-width: $sm) {
+                    left: 150px;
+                    font-size: 30px;
+                    top: 200px;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                font-family: "Lato";
+                color: rgb(0, 0, 0);
+                line-height: 1.5;
+                text-align: left;
+                position: absolute;
+                left: 380px;
+                top: 260px;
+                width: 61%;
+
+                @media only screen and(max-width: $sm) {
+                    left: 10px;
+                    font-size: 14px;
+                    top: 250px;
+                    width: 100%;
+                }
+           }  
+        }
+    }
+    section:nth-child(2) {
+        position: relative;
+        height: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        .overlay {
+            position: absolute;
+            background-color: $primary-gradient;
+            height: 100%;
+            width: 100%;
+        }    
+        .carousel {
+            display: none;
+            height: auto;
+            width: auto;
+            position: relative;
+            width: auto;
+            padding-top: 20px;
+
+            img {
+                margin-right: 5px;
+                
+                @media only screen and (max-width: $sm) {
+                    height: 50px;
+                }
+            }
+        }
+        .dot-container {
+            padding-bottom: 18px;
+
+            .dot {
+                position: relative;
+                cursor: pointer;
+                height: 6px;
+                width: 6px;
+                margin: 0 2px;
+                background-color: white;
+                opacity: 0.2;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+            .active {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+// Climg Frame
+.climb {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    padding: 0 40px;
+    margin: 0 auto;
+
+    @media only screen and(max-width: $sm) {
+        height: 400px;
+        align-items: flex-start;
+    }
+    h1 {
+        color: $primary-gradient;
+        font-family: "Oswald";
+        color: rgba(65, 79, 107, 0.502);
+        font-weight: bold;
+        font-size: 150px;
+        line-height: 1.2;
+        text-align: left;
+        
+        @media only screen and(max-width: $sm) {
+            font-size: 100px;
+        }
+    }
+
+    h3 {
+        font-size: 40px;
+        font-family: "Oswald";
+        color: $primary;
+        font-weight: bold;
+        position: absolute;
+        left: 205px;
+        top: 85px;
+        line-height: 1.2;
+        text-align: left;
+        text-transform: uppercase;
+
+        @media only screen and(max-width: $sm) {
+            left: 150px;
+            font-size: 30px;
+            top: 150px;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        font-family: "Lato";
+        color: rgb(0, 0, 0);
+        line-height: 1.5;
+        text-align: left;
+        margin-left: 100px;
+        @media only screen and(max-width: $sm) {
+            left: 0px;
+            margin-left: 0px;
+            font-size: 14px;
+            top: 250px;
+            position: absolute;
+        }
+    }
+}
+
+// Third Frame
+#main3 {
+    @include main;
+    height: 70% !important;
+
+    header {
+        background-color: $primary;
+
+        .tabs {
+            color: $menuBG;
+            position: relative;
+            width: 60%;
+            align-items: flex-start;
+            margin: 0 auto;
+            ul {
+                display: flex;
+                flex-direction: row;
+                list-style-type: none;
+
+                li {
+                    padding: 5px 15px;
+                    text-decoration: underline;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-family: "Oswald";
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: $menuBG;
+                        color: $primary;
+                    }
+                    &:active {
+                        background-color: $menuBG;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+    #tabcontent1 {
+        @include main;
+        background-position: bottom;
+        background-image: url("../img/tab1 bg.png");
+        padding-top: 101px;
+        padding-left: 300px;
+        @media only screen and(max-width: $sm) {
+            padding-left: 0;
+        }
+        .content {
+            background-color: white;
+            opacity: 0.702;
+            width: 352px;
+            height: 229px;
+            padding: 21px 41px 57px 41px;
+
+            h1 {
+                color: $primary;
+                text-transform: uppercase;
+                font-family: "Oswald";
+                line-height: 1.2;
+                font-weight: bold;
+                text-align: left;
+
+            }
+            .schedules {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                margin-top: 10px;
+
+                h1 {
+                    position:sticky;
+                    z-index: 999;
+                }
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    list-style-type: none;
+                    justify-content: space-between;
+
+                    &:nth-child(2) {
+                        margin-top: -30px;
+                    }
+                    li {
+                        font-family: "Lato";
+                        font-size: 16px;
+                        color: black;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+    #tabcontent2 {
+        display: none;
+        @include main;
+        background-position: bottom;
+        background-image: url("../img/tab2 bg.png");
+        padding-top: 101px;
+        padding-left: 300px;
+        @media only screen and(max-width: $sm) {
+            padding-left: 0;
+        }
+        .content {
+            background-color: white;
+            opacity: 0.702;
+            width: 352px;
+            height: 229px;
+            padding: 21px 41px 57px 41px;
+
+            h1 {
+                color: $primary;
+                text-transform: uppercase;
+                font-family: "Oswald";
+                line-height: 1.2;
+                font-weight: bold;
+                text-align: left;
+
+            }
+            .schedules {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                margin-top: 10px;
+
+                h1 {
+                    position:sticky;
+                    z-index: 999;
+                }
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    list-style-type: none;
+                    justify-content: space-between;
+
+                    &:nth-child(3) {
+                        margin-top: -30px;
+                    }
+                    li {
+                        font-family: "Lato";
+                        font-size: 16px;
+                        color: black;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+    .active {
+        background-color: $menuBG;
+        color: $primary;
+    }
+    footer {
+        background-color: $primary;
+        height: 74px;
+        padding: 16px 0 15px 0;
+
+        .copyright {
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            .logo {
+                img {
+                    &:nth-child(1) {
+                        background-color: $primary-gradient;
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            .copyright-text {
+                font-size: 12px;
+                font-family: "Lato";
+                color: rgb(99, 118, 157);
+                font-style: italic;
+                text-transform: uppercase;
+                line-height: 1.667;
+            }
+        }
+    }
+}
+
+//Fade Animation
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}

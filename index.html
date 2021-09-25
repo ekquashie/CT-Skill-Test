@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>CT Skill Test v3</title>
+</head>
+<body>
+    <section class="main" id="main1">
+        <div class="galaxy"></div>
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="/img/Logo.png" alt="logo">
+                </div>
+                <ul>
+                    <li> <a href="#history">01. History</a> </li>
+                    <li> <a href="#team">02. Team</a> </li>
+                </ul>
+            </nav>
+        </header>
+
+        <img id="losangeles" src="img/Layer 628.png" alt="LosAngeles Mountains">
+    </section>
+
+    <!-- History -->
+
+    <section class="main" id="history">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img id="one" src="/img/Logo.png" alt="logo">
+                    <img id="two" src="/img/LOSANGELES MOUNTAINS.png" alt="losangeles">
+                </div>
+                <ul>
+                    <li> <a href="#history">01. History</a> </li>
+                    <li> <a href="#team">02. Team</a> </li>
+                </ul>
+            </nav>
+        </header>
+    
+        <div class="content">
+            <section id="lorem">
+                <h1>01.</h1>
+                <h3>History</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in ante viverra, rutrum erat rutrum, consectetur
+                    mi.Proin at maximus est. Nullam purus ex, iaculis sed erat sed, blandit tincidunt quam. Cras scelerisque id quam
+                    sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim
+                    tortor nec
+                    congue.</p>
+            </section>
+
+            <section>
+                <div class="overlay"></div>
+                <div class="carousel-container">
+                    <div id="carousel1" class="carousel fade" style="display:block;">
+                        <img src="img/photo-1458442310124-dde6edb43d10.png" alt="carousel1" id="1">
+                        <img src="img/photo-1443980995706-8d107e98e707.png" alt="carousel2" id="2">
+                        <img src="img/photo-1458442310124-dde6edb43d10.png" alt="carousel3" id="3">
+                        <img src="img/photo-1443980995706-8d107e98e707.png" alt="carousel4" id="4">
+                    </div>
+                    <div id="carousel2" class="carousel fade">
+                        <img src="/img/photo-1458442310124-dde6edb43d10.png" alt="carousel1" id="1">
+                        <img src="img/photo-1443980995706-8d107e98e707.png" alt="carousel2" id="2">
+                        <img src="img/photo-1458442310124-dde6edb43d10.png" alt="carousel3" id="3">
+                    </div>
+                    <div id="carousel3" class="carousel fade">
+                        <img src="/img/photo-1458442310124-dde6edb43d10.png" alt="carousel1" id="1">
+                        <img src="img/photo-1443980995706-8d107e98e707.png" alt="carousel2" id="2">
+                    </div>
+                </div>
+                <div class="dot-container" style="text-align:center">
+                    <span class="dot active" onclick="currentSlide(event, 'carousel1')"></span>
+                    <span class="dot" onclick="currentSlide(event, 'carousel2')"></span>
+                    <span class="dot" onclick="currentSlide(event, 'carousel3')"></span>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <div class="climb" id="team">
+        <h1>02.</h1>
+        <h3>Climb</h3>
+        <p>Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam.
+            Vivamus suscipit dignissim tortor nec congue.</p>
+    </div>
+
+    <section class="main" id="main3">
+        <header>
+            <nav class="tabs">
+                <ul class="mountaintabs">
+                    <li class="tablinks active" onclick="openContent(event, 'tabcontent1')">Mountain 1</li>
+                    <li class="tablinks" onclick="openContent(event, 'tabcontent2')">Mountain 2</li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="tabcontent1" class="tabcontent">
+            <div class="content">
+                <h1>Schedule</h1>
+                <div class="schedules">
+                    <ul>
+                        <li>25 Nov 2016</li>
+                        <li>Vestibulum viverra</li>
+                    </ul>
+                    <ul>
+                        <li>28 Nov 2016</li>
+                        <li>Vestibulum viverra</li>
+                    </ul>
+                    <ul>
+                        <li>18 Dec 2016</li>
+                        <li>Vestibulum viverra</li>
+                    </ul>
+                    <ul>
+                        <li>7 Jan 2017</li>
+                        <li>Vestibulum viverra</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="tabcontent2" class="tabcontent">
+            <div class="content">
+                <h1>Schedule</h1>
+                <div class="schedules">
+                    <ul>
+                        <li>17 Nov 2016</li>
+                        <li>Vestibulum viverra</li>
+                    </ul>
+                    <ul>
+                        <li>13 Dec 2016</li>
+                        <li>Vestibulum viverra</li>
+                    </ul>
+                    <ul>
+                        <li>28 Dec 2016</li>
+                        <li>Vestibulum viverra</li>
+                    </ul>
+                    <ul>
+                        <li>9 Feb 2017</li>
+                        <li>Vestibulum viverra</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="copyright">
+                <div class="logo">
+                    <img src="img/Logo.png" alt="logo">
+                    <img src="img/footer img.png" alt="title">
+                </div>
+
+                <div class="copyright-text">
+                    Copyright 2016. All Rights Reserved
+                </div>
+            </div>
+        </footer>
+    </section>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
