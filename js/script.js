@@ -1,9 +1,5 @@
 
-
-var tabs = document.getElementsByClassName("tabcontent");
-
-tabs.addEventListener("click", openContent); 
-
+// Section 3 tab
 function openContent(evt, content) {
     var i, tabcontent, tablinks;
 
@@ -24,6 +20,28 @@ function openContent(evt, content) {
 
 }
 
+function openContentmobile(evt, content) {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontentmobile");
+
+    for(i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinksmobile");
+
+    for(i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace("active", "");
+    }
+
+    document.getElementById(content).style.display = "block";
+    evt.currentTarget.className += " active";
+
+}
+
+
+// Carousel
 function currentSlide(evt, content) {
     var i, slidecontent, slidebtn;
 

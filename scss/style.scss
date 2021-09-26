@@ -33,10 +33,6 @@ html, body {
     background-position: top;
     position: relative;
 
-    @media only screen and (max-width: $sm) {
-        min-width: 100%;
-    }
-
     .galaxy {
         position: absolute;
         background-image: url("../img/Layer 627.png");
@@ -52,15 +48,24 @@ html, body {
         nav {
             @include nav;
 
+            @media only screen and(max-width: $sm) {
+                width: 100%;
+                padding: 0 40px;
+            }
+
             ul {
                 width: auto;
                 display: flex;
                 flex-direction: row;
                 list-style-type: none;
+                align-items: center;
 
                 li {
                     cursor: pointer;
                     margin-right: 50px;
+                    @media only screen and(max-width: $sm) {
+                        margin-right: 20px;
+                    }
                     
                     a {
                         color: white;
@@ -83,6 +88,12 @@ html, body {
             height: 100px;
             width: 210px;
             top: 24%;
+        }
+        @media only screen and (min-width: $sm+1) and (max-width: $md) {
+            height: 200px;
+            width: 350px;
+            top: 22%;
+            left: 45%;
         }
     }
 }
@@ -108,10 +119,29 @@ html, body {
         nav {
             @include nav;
             height: auto;
+            @media only screen and(max-width: $sm) {
+                width: 100%;
+                padding: 0 40px;
+            }
 
             .logo {
+                @media only screen and(max-width: $sm) {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 10px;
+                }
+
                 img#one {
                     margin-right: 10px;
+                    @media only screen and(max-width: $sm) {
+                        margin-right: 5px;
+                    }
+                }
+                img#two {
+                    @media only screen and(max-width: $sm) {
+                        width: 50px;
+                        height: 20px;
+                    }
                 }
             }
 
@@ -123,6 +153,10 @@ html, body {
                 li {
                     cursor: pointer;
                     margin-right: 50px;
+                    @media only screen and(max-width: $sm) {
+                        margin-right: 10px;
+                        font-size: 3px;
+                    }
                     a {
                         color: $primary;
                         @include headinglink;
@@ -156,6 +190,11 @@ html, body {
                     font-size: 100px;
                     top: 150px;
                 }
+                @media only screen and (min-width: $sm+1) and (max-width: $md) {
+                    left: 100px;
+                    font-size: 120px;
+                    top: 150px;
+                }
             }
 
             h3 {
@@ -174,6 +213,11 @@ html, body {
                     font-size: 30px;
                     top: 200px;
                 }
+                @media only screen and (min-width: $sm+1) and (max-width: $md) {
+                    left: 218px;
+                    font-size: 30px;
+                    top: 220px;
+                }
             }
 
             p {
@@ -189,9 +233,17 @@ html, body {
 
                 @media only screen and(max-width: $sm) {
                     left: 10px;
-                    font-size: 14px;
-                    top: 250px;
-                    width: 100%;
+                    font-size: 16px;
+                    margin-left: 15px;
+                    top: 300px;
+                    width: 90%;
+                }
+                @media only screen and (min-width: $sm+1) and (max-width: $md) {
+                    left: 10px;
+                    font-size: 20px;
+                    margin-left: 15px;
+                    top: 300px;
+                    width: 90%;
                 }
            }  
         }
@@ -204,6 +256,10 @@ html, body {
         justify-content: space-around;
         align-items: center;
         flex-direction: column;
+
+        @media only screen and (min-width: $sm+1) and (max-width: $md) {
+            height: 150px;
+        }
         .overlay {
             position: absolute;
             background-color: $primary-gradient;
@@ -218,11 +274,15 @@ html, body {
             width: auto;
             padding-top: 20px;
 
+
             img {
                 margin-right: 5px;
                 
                 @media only screen and (max-width: $sm) {
                     height: 50px;
+                }
+                @media only screen and (min-width: $sm+1) and (max-width: $md) {
+                    height: 100px;
                 }
             }
         }
@@ -259,7 +319,7 @@ html, body {
     margin: 0 auto;
 
     @media only screen and(max-width: $sm) {
-        height: 400px;
+        height: 300px;
         align-items: flex-start;
     }
     h1 {
@@ -270,7 +330,7 @@ html, body {
         font-size: 150px;
         line-height: 1.2;
         text-align: left;
-        
+
         @media only screen and(max-width: $sm) {
             font-size: 100px;
         }
@@ -291,7 +351,7 @@ html, body {
         @media only screen and(max-width: $sm) {
             left: 150px;
             font-size: 30px;
-            top: 150px;
+            top: 50px;
         }
     }
 
@@ -304,9 +364,9 @@ html, body {
         margin-left: 100px;
         @media only screen and(max-width: $sm) {
             left: 0px;
-            margin-left: 0px;
-            font-size: 14px;
-            top: 250px;
+            margin: 0 auto;
+            font-size: 16px;
+            top: 150px;
             position: absolute;
         }
     }
@@ -316,6 +376,18 @@ html, body {
 #main3 {
     @include main;
     height: 70% !important;
+
+    .pc {
+        @media only screen and(max-width: $sm) {
+            display: none;
+        }
+    }
+    .mobile {
+        display: none;
+        @media only screen and(max-width: $sm) {
+            display: block;
+        }
+    }
 
     header {
         background-color: $primary;
@@ -338,6 +410,10 @@ html, body {
                     font-weight: bold;
                     font-family: "Oswald";
 
+                    @media only screen and(max-width: $sm) {
+                        font-size: 14px;
+                    }
+
                     &:hover {
                         cursor: pointer;
                         background-color: $menuBG;
@@ -351,13 +427,14 @@ html, body {
             }
         }
     }
-    #tabcontent1 {
+    #tabcontent1,  #tabcontent1mobile {
         @include main;
         background-position: bottom;
         background-image: url("../img/tab1 bg.png");
         padding-top: 101px;
         padding-left: 300px;
         @media only screen and(max-width: $sm) {
+            display: none;
             padding-left: 0;
         }
         .content {
@@ -406,7 +483,7 @@ html, body {
             }
         }
     }
-    #tabcontent2 {
+    #tabcontent2, #tabcontent2mobile {
         display: none;
         @include main;
         background-position: bottom;
@@ -479,10 +556,26 @@ html, body {
             align-items: center;
             
             .logo {
+
+                @media only screen and(max-width: $sm) {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 20px;
+                }
                 img {
+
+                    &:nth-child(2) {
+                        @media only screen and(max-width: $sm) {
+                            width: 60px;
+                            height: 20px;
+                        }
+                    }
                     &:nth-child(1) {
-                        background-color: $primary-gradient;
                         margin-right: 10px;
+
+                        @media only screen and(max-width: $sm) {
+                            margin-right: 5px;
+                        }
                     }
                 }
             }

@@ -27,11 +27,6 @@ html, body {
   background-position: top;
   position: relative;
 }
-@media only screen and (max-width: 480px) {
-  #main1 {
-    min-width: 100%;
-  }
-}
 #main1 .galaxy {
   position: absolute;
   background-image: url("../img/Layer 627.png");
@@ -64,6 +59,12 @@ html, body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media only screen and (max-width: 480px) {
+  #main1 header nav {
+    width: 100%;
+    padding: 0 40px;
+  }
+}
 #main1 header nav ul {
   width: auto;
   display: -webkit-box;
@@ -74,10 +75,18 @@ html, body {
       -ms-flex-direction: row;
           flex-direction: row;
   list-style-type: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 #main1 header nav ul li {
   cursor: pointer;
   margin-right: 50px;
+}
+@media only screen and (max-width: 480px) {
+  #main1 header nav ul li {
+    margin-right: 20px;
+  }
 }
 #main1 header nav ul li a {
   color: white;
@@ -102,6 +111,14 @@ html, body {
     height: 100px;
     width: 210px;
     top: 24%;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  #main1 #losangeles {
+    height: 200px;
+    width: 350px;
+    top: 22%;
+    left: 45%;
   }
 }
 
@@ -155,8 +172,36 @@ html, body {
           justify-content: space-between;
   height: auto;
 }
+@media only screen and (max-width: 480px) {
+  #history header nav {
+    width: 100%;
+    padding: 0 40px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #history header nav .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 10px;
+  }
+}
 #history header nav .logo img#one {
   margin-right: 10px;
+}
+@media only screen and (max-width: 480px) {
+  #history header nav .logo img#one {
+    margin-right: 5px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #history header nav .logo img#two {
+    width: 50px;
+    height: 20px;
+  }
 }
 #history header nav ul {
   width: auto;
@@ -168,6 +213,12 @@ html, body {
 #history header nav ul li {
   cursor: pointer;
   margin-right: 50px;
+}
+@media only screen and (max-width: 480px) {
+  #history header nav ul li {
+    margin-right: 10px;
+    font-size: 3px;
+  }
 }
 #history header nav ul li a {
   color: #414f6b;
@@ -209,6 +260,13 @@ html, body {
     top: 150px;
   }
 }
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  #history .content #lorem h1 {
+    left: 100px;
+    font-size: 120px;
+    top: 150px;
+  }
+}
 #history .content #lorem h3 {
   font-size: 40px;
   font-family: "Oswald";
@@ -228,6 +286,13 @@ html, body {
     top: 200px;
   }
 }
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  #history .content #lorem h3 {
+    left: 218px;
+    font-size: 30px;
+    top: 220px;
+  }
+}
 #history .content #lorem p {
   font-size: 16px;
   font-family: "Lato";
@@ -242,9 +307,19 @@ html, body {
 @media only screen and (max-width: 480px) {
   #history .content #lorem p {
     left: 10px;
-    font-size: 14px;
-    top: 250px;
-    width: 100%;
+    font-size: 16px;
+    margin-left: 15px;
+    top: 300px;
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  #history .content #lorem p {
+    left: 10px;
+    font-size: 20px;
+    margin-left: 15px;
+    top: 300px;
+    width: 90%;
   }
 }
 #history section:nth-child(2) {
@@ -263,6 +338,11 @@ html, body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  #history section:nth-child(2) {
+    height: 150px;
+  }
 }
 #history section:nth-child(2) .overlay {
   position: absolute;
@@ -284,6 +364,11 @@ html, body {
 @media only screen and (max-width: 480px) {
   #history section:nth-child(2) .carousel img {
     height: 50px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  #history section:nth-child(2) .carousel img {
+    height: 100px;
   }
 }
 #history section:nth-child(2) .dot-container {
@@ -323,7 +408,7 @@ html, body {
 }
 @media only screen and (max-width: 480px) {
   .climb {
-    height: 400px;
+    height: 300px;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -359,7 +444,7 @@ html, body {
   .climb h3 {
     left: 150px;
     font-size: 30px;
-    top: 150px;
+    top: 50px;
   }
 }
 .climb p {
@@ -373,9 +458,9 @@ html, body {
 @media only screen and (max-width: 480px) {
   .climb p {
     left: 0px;
-    margin-left: 0px;
-    font-size: 14px;
-    top: 250px;
+    margin: 0 auto;
+    font-size: 16px;
+    top: 150px;
     position: absolute;
   }
 }
@@ -386,6 +471,19 @@ html, body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 70% !important;
+}
+@media only screen and (max-width: 480px) {
+  #main3 .pc {
+    display: none;
+  }
+}
+#main3 .mobile {
+  display: none;
+}
+@media only screen and (max-width: 480px) {
+  #main3 .mobile {
+    display: block;
+  }
 }
 #main3 header {
   background-color: #414f6b;
@@ -416,6 +514,11 @@ html, body {
   font-weight: bold;
   font-family: "Oswald";
 }
+@media only screen and (max-width: 480px) {
+  #main3 header .tabs ul li {
+    font-size: 14px;
+  }
+}
 #main3 header .tabs ul li:hover {
   cursor: pointer;
   background-color: #b0b4be;
@@ -425,7 +528,7 @@ html, body {
   background-color: #b0b4be;
   color: #414f6b;
 }
-#main3 #tabcontent1 {
+#main3 #tabcontent1, #main3 #tabcontent1mobile {
   height: 100%;
   min-width: 100%;
   background-repeat: no-repeat;
@@ -436,18 +539,19 @@ html, body {
   padding-left: 300px;
 }
 @media only screen and (max-width: 480px) {
-  #main3 #tabcontent1 {
+  #main3 #tabcontent1, #main3 #tabcontent1mobile {
+    display: none;
     padding-left: 0;
   }
 }
-#main3 #tabcontent1 .content {
+#main3 #tabcontent1 .content, #main3 #tabcontent1mobile .content {
   background-color: white;
   opacity: 0.702;
   width: 352px;
   height: 229px;
   padding: 21px 41px 57px 41px;
 }
-#main3 #tabcontent1 .content h1 {
+#main3 #tabcontent1 .content h1, #main3 #tabcontent1mobile .content h1 {
   color: #414f6b;
   text-transform: uppercase;
   font-family: "Oswald";
@@ -455,7 +559,7 @@ html, body {
   font-weight: bold;
   text-align: left;
 }
-#main3 #tabcontent1 .content .schedules {
+#main3 #tabcontent1 .content .schedules, #main3 #tabcontent1mobile .content .schedules {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -469,11 +573,11 @@ html, body {
   height: 100%;
   margin-top: 10px;
 }
-#main3 #tabcontent1 .content .schedules h1 {
+#main3 #tabcontent1 .content .schedules h1, #main3 #tabcontent1mobile .content .schedules h1 {
   position: sticky;
   z-index: 999;
 }
-#main3 #tabcontent1 .content .schedules ul {
+#main3 #tabcontent1 .content .schedules ul, #main3 #tabcontent1mobile .content .schedules ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -486,16 +590,16 @@ html, body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-#main3 #tabcontent1 .content .schedules ul:nth-child(2) {
+#main3 #tabcontent1 .content .schedules ul:nth-child(2), #main3 #tabcontent1mobile .content .schedules ul:nth-child(2) {
   margin-top: -30px;
 }
-#main3 #tabcontent1 .content .schedules ul li {
+#main3 #tabcontent1 .content .schedules ul li, #main3 #tabcontent1mobile .content .schedules ul li {
   font-family: "Lato";
   font-size: 16px;
   color: black;
   text-align: left;
 }
-#main3 #tabcontent2 {
+#main3 #tabcontent2, #main3 #tabcontent2mobile {
   display: none;
   height: 100%;
   min-width: 100%;
@@ -507,18 +611,18 @@ html, body {
   padding-left: 300px;
 }
 @media only screen and (max-width: 480px) {
-  #main3 #tabcontent2 {
+  #main3 #tabcontent2, #main3 #tabcontent2mobile {
     padding-left: 0;
   }
 }
-#main3 #tabcontent2 .content {
+#main3 #tabcontent2 .content, #main3 #tabcontent2mobile .content {
   background-color: white;
   opacity: 0.702;
   width: 352px;
   height: 229px;
   padding: 21px 41px 57px 41px;
 }
-#main3 #tabcontent2 .content h1 {
+#main3 #tabcontent2 .content h1, #main3 #tabcontent2mobile .content h1 {
   color: #414f6b;
   text-transform: uppercase;
   font-family: "Oswald";
@@ -526,7 +630,7 @@ html, body {
   font-weight: bold;
   text-align: left;
 }
-#main3 #tabcontent2 .content .schedules {
+#main3 #tabcontent2 .content .schedules, #main3 #tabcontent2mobile .content .schedules {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -540,11 +644,11 @@ html, body {
   height: 100%;
   margin-top: 10px;
 }
-#main3 #tabcontent2 .content .schedules h1 {
+#main3 #tabcontent2 .content .schedules h1, #main3 #tabcontent2mobile .content .schedules h1 {
   position: sticky;
   z-index: 999;
 }
-#main3 #tabcontent2 .content .schedules ul {
+#main3 #tabcontent2 .content .schedules ul, #main3 #tabcontent2mobile .content .schedules ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -557,10 +661,10 @@ html, body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-#main3 #tabcontent2 .content .schedules ul:nth-child(3) {
+#main3 #tabcontent2 .content .schedules ul:nth-child(3), #main3 #tabcontent2mobile .content .schedules ul:nth-child(3) {
   margin-top: -30px;
 }
-#main3 #tabcontent2 .content .schedules ul li {
+#main3 #tabcontent2 .content .schedules ul li, #main3 #tabcontent2mobile .content .schedules ul li {
   font-family: "Lato";
   font-size: 16px;
   color: black;
@@ -588,9 +692,30 @@ html, body {
       -ms-flex-align: center;
           align-items: center;
 }
+@media only screen and (max-width: 480px) {
+  #main3 footer .copyright .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 20px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #main3 footer .copyright .logo img:nth-child(2) {
+    width: 60px;
+    height: 20px;
+  }
+}
 #main3 footer .copyright .logo img:nth-child(1) {
-  background-color: rgba(65, 79, 107, 0.502);
   margin-right: 10px;
+}
+@media only screen and (max-width: 480px) {
+  #main3 footer .copyright .logo img:nth-child(1) {
+    margin-right: 5px;
+  }
 }
 #main3 footer .copyright .copyright-text {
   font-size: 12px;
